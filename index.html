@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal site and portfolio hosted on GitHub Pages." />
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Personal site and portfolio hosted on GitHub Pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://yourusername.github.io/og.jpg" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --bg: #0b0d12; --card:#11141b; --text:#e6e9ef; --muted:#a0a6b3; --accent:#5bbaff;
+      --radius: 18px; --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: radial-gradient(1200px 800px at 70% -10%, #132033 0%, #0b0d12 55%); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 28px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    nav { display:flex; gap:18px; font-weight:600; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo { width:42px; height:42px; border-radius:50%; background: linear-gradient(135deg, #5bbaff, #8a5bff); box-shadow: var(--shadow); }
+    .tag { color: var(--muted); font-size:14px; }
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; margin:42px 0; }
+    .card { background: rgba(17,20,27,.7); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .card > * { padding: 22px 24px; }
+    .pill { display:inline-flex; align-items:center; gap:10px; font-size:12px; color:var(--muted); background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); padding:8px 12px; border-radius:999px; }
+    h1 { font-size: clamp(28px, 4vw, 44px); margin: 10px 0 8px; }
+    p { line-height:1.6; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
+    .project { transition: transform .2s ease, box-shadow .2s ease; }
+    .project:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.45); }
+    .project h3 { margin: 6px 0 8px; }
+    .footer { margin: 40px 0; color: var(--muted); font-size:14px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; background: #0a0d12; border: 1px solid rgba(255,255,255,.12); padding: 2px 6px; border-radius: 6px; color:#cdd6f4 }
+    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>Your Name</strong><div class="tag">Security · IT Ops · Automation</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <div>
+          <span class="pill">🚀 GitHub Pages • Static Site</span>
+          <h1>Hi, I’m <span style="color:#5bbaff">Your Name</span>.</h1>
+          <p>
+            I build secure, automated systems and help teams ship reliable software.
+            This site is a fast, single‑file starter you can host on <strong>username.github.io</strong>.
+          </p>
+          <p>
+            Edit the text, add your projects below, and push to your repository—GitHub Pages takes care of the rest.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://docs.github.com/pages" target="_blank" rel="noreferrer">GitHub Pages Docs</a></li>
+            <li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noreferrer">Markdown Guide</a></li>
+          </ul>
+          <p class="tag">Tip: rename this file to <span class="kbd">index.html</span> and put it in the repository root.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="grid">
+      <article class="card project">
+        <div>
+          <div class="pill">Featured</div>
+          <h3>Incident Response Automation</h3>
+          <p>Playbooks on Azure Logic Apps + Sentinel to reduce false positives while keeping alert fidelity high.</p>
+          <p><a href="#">Read more →</a></p>
+        </div>
+      </article>
+      <article class="card project">
+        <div>
+          <div class="pill">Open Source</div>
+          <h3>KQL Snippets</h3>
+          <p>Useful Kusto queries for threat hunting, tuning noisy rules, and triage.</p>
+          <p><a href="#">Read more →</a></p>
+        </div>
+      </article>
+      <article class="card project">
+        <div>
+          <div class="pill">Tutorial</div>
+          <h3>PDQ + Windows 11</h3>
+          <p>Zero‑touch upgrade flow, driver caveats, and HP Wolf interactions documented.</p>
+          <p><a href="#">Read more →</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="card" style="margin-top:24px">
+      <div>
+        <h2>About</h2>
+        <p>Short bio goes here. Mention your current role, interests (security, automation, networking), and what you’re looking to collaborate on.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:24px">
+      <div>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · GitHub: <a href="https://github.com/yourusername">@yourusername</a> · LinkedIn: <a href="#">Profile</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Your Name. Built with GitHub Pages.</p>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </div>
+</body>
+</html>
